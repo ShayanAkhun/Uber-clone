@@ -2,8 +2,10 @@ import { FlatList, Image, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
 import tw from "twrnc";
 import { Icon } from "react-native-elements";
+import { useNavigation } from "@react-navigation/native";
 
-const NavOptions = ({ navigation }) => {
+const NavOptions = () => {
+  const navigation = useNavigation();
   const data = [
     {
       id: 123,
@@ -26,7 +28,7 @@ const NavOptions = ({ navigation }) => {
       renderItem={({ item }) => (
         <TouchableOpacity
           style={tw`p-2 pl-6 pb-8 pt-4 bg-gray-200 m-2 w-40`}
-          onPress={() => navigation.navigate("MapScreen")}
+          onPress={() => navigation.navigate(item.screen)}
         >
           <View>
             <Image
