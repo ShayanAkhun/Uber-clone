@@ -15,7 +15,11 @@ export default function App() {
       <NavigationContainer>
         <SafeAreaProvider>
           <Stack.Navigator>
-            <Stack.Screen name="HomeScreen" component={HomeScreen} />
+            <Stack.Screen
+              name="HomeScreen"
+              component={HomeScreen}
+              options={{ headerShown: false }}
+            />
             <Stack.Screen
               name="MapScreen"
               component={MapScreen}
