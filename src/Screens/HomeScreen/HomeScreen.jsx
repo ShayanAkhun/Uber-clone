@@ -7,7 +7,7 @@ import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplet
 import { GOOGLE_API_KEY } from "@env";
 import { useDispatch } from "react-redux";
 import { setOrigin, setDestination } from "../../Redux/Slice/Slice";
-import Favourites from "../Favourites/Favourites";
+import Favourites from "../../components/Favourites/Favourites";
 
 const HomeScreen = () => {
   const dispatch = useDispatch();
