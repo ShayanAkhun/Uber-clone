@@ -20,7 +20,7 @@ const Maps = () => {
     if (!origin || !destination) return;
 
     mapRef.current.fitToSuppliedMarkers(["origin", "destination"], {
-      // edgePadding: { top: 100, right: 100, left: 100, bottom: 100 },
+      edgePadding: { top: 100, right: 100, left: 100, bottom: 100 },
     });
   }, [origin, destination]);
 
